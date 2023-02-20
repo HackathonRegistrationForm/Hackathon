@@ -27,67 +27,7 @@
 
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		
-		<div class="registration_form1">
-			<div class="form_wrap">
-					<h2  >Group1</h2>
-					
-					<div class="input_grp">
-						<div class="input_wrap">
-							<label  for="fname" >Registered:</label>
-							<input type="text" style="font-size: large;" id="fname" [(ngModel)]="this.List.length" autocomplete="off" name="fname" readonly>
-						</div>
-						<div class="input_wrap">
-							<label for="lname">Available</label>
-							<input type="text" id="lname" style="font-size: large;" [(ngModel)]="15-this.List.length" autocomplete="off" name="lname" readonly  />   
-							</div>
-					</div>
-					<h2 >Group2</h2>
-					<div class="input_grp">
-						<div class="input_wrap">							<label for="fname">Registered</label>
-							<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List1.length" autocomplete="off" name="fname" readonly>  
-						</div>
-						<div class="input_wrap">
-							<label for="lname">Available</label>
-							<input type="text" id="lname" style="font-size:large;" [(ngModel)]="15-this.List1.length" autocomplete="off" name="lname"  readonly/>
-							</div>
-					</div>
-					<h2 >Group3</h2>
-					<div class="input_grp">
-						<div class="input_wrap">
-							<label for="fname">Registered</label>
-							<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List2.length" autocomplete="off" name="fname" readonly >  
-						</div>
-						<div class="input_wrap">
-							<label for="lname">Available</label>
-							<input type="text" id="lname" style="font-size: large;" [(ngModel)]="15-this.List2.length" autocomplete="off" name="lname" readonly />
-							</div>
-					</div>
-					<h2 >Group4</h2>
-					<div class="input_grp">
-						<div class="input_wrap">
-							
-							<label for="fname">Registered</label>
-							<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List3.length" autocomplete="off" name="fname"readonly >  
-						</div>
-						<div class="input_wrap">
-							<label for="lname">Available</label>
-							<input type="text" id="lname" style="font-size: large;" [(ngModel)]="15-this.List3.length" autocomplete="off" name="lname"  />
-						  
-							</div>	
-					</div>
-					<h2 >Group5</h2>
-					<div class="input_grp">
-						<div class="input_wrap">
-							<label for="fname">Registered</label>
-							<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List4.length" autocomplete="off" name="fname" >
-						</div>
-						<div class="input_wrap">
-							<label for="lname">Available</label>
-							<input type="text" id="lname" style="font-size: large;" [(ngModel)]="15-this.List4.length" autocomplete="off" name="lname"  />							</div>
-					</div>	
-		</div>
-		</div>
-		</div>
+		
 		
   	<div class="registration_form">
   		<div class="title">
@@ -98,7 +38,7 @@
   				<div class="input_grp">
   					<div class="input_wrap">
   						<label for="fname">First Name</label>
-  						<input type="text" id="fname" formControlName="fname" autocomplete="off" name="fname" >
+  						<input type="text" id="fname" formControlName="fname" autocomplete="off" name="fname"  >
 							  <span style="color: red;" *ngIf="fname && fname.invalid && fname.touched">Please enter your firstname</span>	
   					</div>
   					<div class="input_wrap">
@@ -109,7 +49,7 @@
   				</div>
   				<div class="input_wrap">
   					<label for="email">Email Address</label>
-  					<input type="text" id="email" formControlName="email" autocomplete="off" name="email">
+  					<input type="text" id="email" formControlName="email" autocomplete="off" name="email" [(ngModel)]="Email">
 					 
 						  <span style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter your valid email</span>	
   				</div>
@@ -153,5 +93,69 @@
   		</form>
 	</div>
   </div>
+
+
+  <div class="registration_form1">
+	<div class="form_wrap">
+			<h2  >Group1</h2>
+			
+			<div class="input_grp">
+				<div class="input_wrap">
+					<label  for="fname" >Registered:</label>
+					<input type="text" style="font-size: large;" id="fname" [(ngModel)]="this.List.length" autocomplete="off" name="fname" readonly>
+				</div>
+				<div class="input_wrap">
+					<label for="lname">Available</label>
+					<input type="text" id="lname" style="font-size: large;" [(ngModel)]="count-this.List.length" autocomplete="off" name="lname" readonly  />   
+					</div>
+			</div>
+			<h2 >Group2</h2>
+			<div class="input_grp">
+				<div class="input_wrap">							<label for="fname">Registered</label>
+					<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List1.length" autocomplete="off" name="fname" readonly>  
+				</div>
+				<div class="input_wrap">
+					<label for="lname">Available</label>
+					<input type="text" id="lname" style="font-size:large;" [(ngModel)]="count-this.List1.length" autocomplete="off" name="lname"  readonly/>
+					</div>
+			</div>
+			<h2 >Group3</h2>
+			<div class="input_grp">
+				<div class="input_wrap">
+					<label for="fname">Registered</label>
+					<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List2.length" autocomplete="off" name="fname" readonly >  
+				</div>
+				<div class="input_wrap">
+					<label for="lname">Available</label>
+					<input type="text" id="lname" style="font-size: large;" [(ngModel)]="count-this.List2.length" autocomplete="off" name="lname" readonly />
+					</div>
+			</div>
+			<h2 >Group4</h2>
+			<div class="input_grp">
+				<div class="input_wrap">
+					
+					<label for="fname">Registered</label>
+					<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List3.length" autocomplete="off" name="fname"readonly >  
+				</div>
+			
+				<div class="input_wrap">
+					<label for="lname">Available</label>
+					<input type="text" id="lname" style="font-size: large;" [(ngModel)]="count-this.List3.length" autocomplete="off" name="lname"  />
+				  
+					</div>	
+			</div>
+			<h2 >Group5</h2>
+			<div class="input_grp">
+				<div class="input_wrap">
+					<label for="fname">Registered</label>
+					<input type="text" id="fname" style="font-size: large;" [(ngModel)]="this.List4.length" autocomplete="off" name="fname" >
+				</div>
+				<div class="input_wrap">
+					<label for="lname">Available</label>
+					<input type="text" id="lname" style="font-size: large;" [(ngModel)]="count-this.List4.length" autocomplete="off" name="lname"  />							</div>
+			</div>	
+</div>
+</div>
+</div>
   </body>
 
